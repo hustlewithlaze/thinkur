@@ -1,0 +1,37 @@
+{
+  "name": "thinkur",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Thinkur — operations triage and incident intelligence for support tickets",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "start": "node server/server.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "npm run build && node scripts/e2e.mjs && node scripts/e2e-ai.mjs",
+    "analyze": "python3 analysis/eda.py data/support_tickets.csv"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.133.0",
+    "lucide-react": "^1.56.0",
+    "papaparse": "^5.7.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/node": "^26.6.5",
+    "@types/papaparse": "^5.5.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "playwright": "1.56.1",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4",
+    "vitest": "^5.0.4"
+  }
+}
